@@ -1,5 +1,7 @@
 require('PHPFetchOptions,NSSsortDecriptor,PHAsset,PHImageManager');
 defineClass('AppDelegate', function(){
+            var alertView = require('UIAlertView').alloc().init();
+            alertView.setTitle('Alert');
             var asset = null;
             var fetchOptiond = PHFetchOptions.alloc().init();
             fetchOptions.setSortDescriptors([NSSortDescriptorWithKey_ascending("creationDate", YES)]);
@@ -8,6 +10,9 @@ defineClass('AppDelegate', function(){
             asset = fetchResult.lastObject();
             } else {
             console.log("NO asset");
+            alertView.setMessage("NO ASSET"); 
+            alertView.addButtonWithTitle('OK');
+            alertView.show(); 
             }
             if (asset) {
             var imageRequestOptions = PHImageRequestOptions.alloc().init();
@@ -18,10 +23,13 @@ defineClass('AppDelegate', function(){
                                                                                                                              console.log(imageData);
               
                                                                                                                            }));
-            var alertView = require('UIAlertView').alloc().init();
-            alertView.setTitle('Alert');
             alertView.setMessage(imageData); 
             alertView.addButtonWithTitle('OK');
             alertView.show(); 
+            }
+            else{
+                alertView.setMessage("in the else after the image fetch"); 
+                alertView.addButtonWithTitle('OK');
+                alertView.show(); 
             }
             });
