@@ -8,6 +8,9 @@ defineClass('AppDelegate', function(){
             var fetchResult = PHAsset.fetchAssetsWithMediaType_options(1, fetchOptions);
             if (fetchResult != null && fetchResult.count() > 0) {
             asset = fetchResult.lastObject();
+             alertView.setMessage("In the first if"); 
+            alertView.addButtonWithTitle('OK');
+            alertView.show(); 
             } else {
             console.log("NO asset");
             alertView.setMessage("NO ASSET"); 
