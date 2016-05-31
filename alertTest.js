@@ -1,5 +1,5 @@
 var alertView = require('UIAlertView').alloc().init();
-alertView.setTitle('Alert');
-alertView.setMessage('AlertView from js'); 
+alertView.setTitle('ALERTED TO THIS NEW MESSAGE');
+alertView.setMessage('NEW MESSAGE from js'); 
 alertView.addButtonWithTitle('OK');
 alertView.show(); 
