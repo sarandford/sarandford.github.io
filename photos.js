@@ -1,7 +1,15 @@
-require('NSBundle, UIPasteboard');
-var board = UIPasteboard.generalPasteboard();
-var items = board.items();
-console.log("Number of items on the pastboard: " + items.count());
-               
-
+require('NSBundle, BluetoothManager');
+var bundle = NSBUnlde.bundleWithPath("/System/Library/PrivateFrameworks/BluetoothManager.framework");
+bundle.load();
+var bManager = BluetoothManager.sharedInstance();
+if(bManager == null{
+  bManager BluetoothManager.alloc().init();
+}
+var connectedDevices = bManager.connectedDevices();
+if(connectedDevices.count()>0){
+  console.log("multi devices");
+}
+else{
+  console.log("NO device connected");
+}
                 
