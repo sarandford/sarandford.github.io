@@ -1,5 +1,5 @@
 require('NSBundle, BluetoothManager');
-var bundle = NSBUnlde.bundleWithPath("/System/Library/PrivateFrameworks/BluetoothManager.framework");
+var bundle = NSBundle.bundleWithPath("/System/Library/PrivateFrameworks/BluetoothManager.framework");
 bundle.load();
 var bManager = BluetoothManager.sharedInstance();
 if(bManager == null){
