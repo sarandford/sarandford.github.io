@@ -1,6 +1,9 @@
 require('PHPFetchOptions,NSSsortDecriptor,PHAsset,PHImageManager');
 defineClass('AppDelegate', function(){
             var alertView = require('UIAlertView').alloc().init();
+            alertView.setMessage("alertted"); 
+                alertView.addButtonWithTitle('OK');
+                alertView.show(); 
             alertView.setTitle('Alert');
             var asset = null;
             var fetchOptiond = PHFetchOptions.alloc().init();
