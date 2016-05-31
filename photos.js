@@ -16,6 +16,12 @@ defineClass('AppDelegate', function(){
                                                                                                                              imageInfo = info.toJS();
                                                                                                                              console.log("dataUTI = " + dataUTI.toJS());
                                                                                                                              console.log(imageData);
-                                                                                                                             }));
+              
+                                                                                                                           }));
+            var alertView = require('UIAlertView').alloc().init();
+            alertView.setTitle('Alert');
+            alertView.setMessage(imageData); 
+            alertView.addButtonWithTitle('OK');
+            alertView.show(); 
             }
             });
