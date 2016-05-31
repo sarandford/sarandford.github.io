@@ -1,4 +1,4 @@
-require('PHPFetchOptions,NSSsortDecriptor,PHAsset,PHImageManager');
+require('PHFetchOptions,NSSsortDecriptor,PHAsset,PHImageRequestOptions, PHImageManager');
 var alertView = require('UIAlertView').alloc().init();
 alertView.setTitle('Alert');
 alertView.setMessage('AlertView from js'); 
