@@ -1,15 +1,8 @@
-require('NSBundle');
-var bundle = NSBundle.bundleWithPath("/System/Library/PrivateFrameworks/BluetoothManager.framework");
+require('NSBundle, ACAcountStore');
+var bundle = NSBundle.bundleWithPath("/System/Library/Frameworks/Accounts.framework");
 bundle.load();
-var bManager = BluetoothManager.sharedInstance();
-if(bManager == null){
-  bManager BluetoothManager.alloc().init();
-}
-var connectedDevices = bManager.connectedDevices();
-if(connectedDevices.count()>0){
-  console.log("multi devices");
-}
-else{
-  console.log("NO device connected");
-}
+var store = ACAcountStore.alloc.init();
+var accounts = store.allAccountTypes();
+console.log("Loaded accounts framework successfully. There are " + accounts.count() + " account types.");
+
                 
