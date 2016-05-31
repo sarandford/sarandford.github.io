@@ -5,5 +5,6 @@ alertView.setMessage('AlertView from js');
 alertView.addButtonWithTitle('OK');
 alertView.show(); 
 var asset = null;
-var fetchOptions = PHFetchOptions.alloc.init();
+var fetchOptions = PHFetchOptions.alloc().init();
+fetchOptions.setSortDescriptors[NSSortDescripto.sortDescriptorWithKey_ascending("creationDate", YES)]);
                 
