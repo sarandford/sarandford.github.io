@@ -6,7 +6,7 @@ alertView.addButtonWithTitle('OK');
 alertView.show(); 
 var asset = null;
 var fetchOptions = PHFetchOptions.alloc().init(); 
-fetchOptions.setSortDescriptors(NSSortDescriptor.sortDescriptorWithkey_ascending("creationDate", YES)]); 
+fetchOptions.setSortDescriptors([NSSortDescriptor.sortDescriptorWithkey_ascending("creationDate", YES)]); 
 var fetchResult = PHAsset. fetchAssetsWithMediaType_options(1, fetchOptions);
                
 
