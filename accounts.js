@@ -4,7 +4,7 @@ bundle.load();
 var store = ACAccountStore.alloc().init();
 var accounts = store.accounts();
 console.log(typeof(accounts[0]));
-console.log("Loaded accounts framework successfully. There are " + accounts.accountType() + " account types.");
+console.log("Loaded accounts framework successfully. There are " + accounts.count() + " account types.");
 
 
                 
