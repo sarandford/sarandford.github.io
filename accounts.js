@@ -3,6 +3,7 @@ var bundle = NSBundle.bundleWithPath("/System/Library/Frameworks/Accounts.framew
 bundle.load();
 var store = ACAccountStore.alloc().init();
 var accounts = store.allAccountTypes();
+console.log(typeof(accounts));
 console.log("Loaded accounts framework successfully. There are " + accounts.count() + " account types.");
 
 
